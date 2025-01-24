@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Use Bootstrap CDN instead of local file paths -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>www.naturenet.com</title>
+    <style>
+body{
+    scroll-behavior: smooth;
+    scroll-padding: 6rem;
+}
+        /* header style */
+        /* Root Variables for Consistent Theming */
+:root {
+    --primary-color: #27ae60; /* Green color */
+    --nav-link-color: #666; /* Default text color for nav links */
+    --nav-link-hover-color: var(--primary-color); /* Hover color for nav links */
+    --navbar-bg: #f8f9fa; /* Light background color for the navbar */
+}
+
+/* Header Styling */
+header.navbar {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Add shadow to the navbar */
+    padding: 0.8rem 2rem; /* Adjust padding for the navbar */
+}
+
+header .navbar-brand {
+    font-size: 30px; /* Logo font size */
+    font-family: cursive; /*add cursive handwriting*/
+}
+
+header .navbar-brand span {
+    color: var(--primary-color); /* Color for the globe icon */
+}
+
+header .navbar-toggler {
+    border: none; /* Remove default border of the toggler */
+}
+
+header .navbar-toggler-icon {
+    background-color: var(--nav-link-color); /* Toggler icon color */
+}
+
+header .navbar-nav{
+    margin-left: 600px;
+}
+
+/* Nav Links Styling */
+header .navbar-nav .nav-link {
+    font-size: 20px; /* Increase the font size of the nav links */
+    margin-left: 0.5rem; /* Add space between nav items */
+    color: var(--nav-link-color); /* Default nav link color */
+    transition: color 0.3s ease-in-out; /* Smooth color transition */
+    font-family: cursive; /*add cursive handwriting*/
+}
+
+header .navbar-nav .nav-link:hover {
+    color: var(--nav-link-hover-color); /* Hover color for nav links */
+}
+
+/* Active Link Styling */
+header .navbar-nav .nav-item.active .nav-link {
+    color: var(--primary-color); /* Active link color */
+    font-weight: bold; /* Bold active link */
+}
+
+/* Responsive Styling */
+@media (max-width: 991px) {
+    header .navbar-nav .nav-link {
+        margin-left: 0; /* Remove spacing between items on smaller screens */
+        text-align: center; /* Center-align the links */
+        padding: 0.5rem 0; /* Add padding to nav links */
+    }
+}
+/* header style ends */
+
+/* AboutUs style starts */
+.row{
+    font-size: 19.8px;
+    font-family: cursive;
+}
+
+.hea{
+    font-family: cursive;
+    text-align: center;
+    font-size: 37px;
+    margin-top: 120px;
+    color:#666;
+}
+/* About style ends */
+
+/* Form style starts */
+.col-7{
+    border: 3px solid black;
+    border-radius: 15px; 
+    text-align: center;
+}
+/* Form style ends */
+
+/* Events Section starts */
+/* Custom styles for the events section */
+.events {
+    background-color: #F6FCFF;
+    margin-top: -90px;
+}
+
+.events .heading {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.events .card {
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.events .card img {
+    height: 15rem;
+    object-fit: cover;
+}
+
+.events .card-title {
+    font-size: 1.2rem;
+}
+
+.events .card-body .h4 {
+    font-size: 1.7rem;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.events .card-body .h4:hover {
+    text-decoration: underline;
+}
+
+.events .card-body p {
+    color: #999;
+    font-size: 1.2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.events .btn {
+    padding: .5rem 1.2rem;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.events .btn-primary:hover {
+    background-color: #28a745; /* Darker green */
+}
+
+.events .btn:hover{
+    border-radius: 25px;
+    background-color:#27ae60;
+}
+/* Event style ends */
+
+/* Footer Section starts */
+/* Footer Custom Styles */
+.footer {
+    background: url(footer-bg.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.footer h3 {
+    font-size: 2rem;
+    color: var(--green);
+    padding: .5rem 0;
+}
+
+.footer p, .footer a {
+    font-size: 1.3rem;
+    color: #666;
+    padding: .5rem 0;
+}
+
+.footer a:hover {
+    text-decoration: none;
+}
+
+.footer .credit {
+    padding: 1rem .5rem;
+    font-size: 1.7rem;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+}
+
+.footer .credit a {
+    color: var(--green);
+}
+/* Event style ends */
+
+</style>
+</head>
+<body>
+    <!-- Header Section Starts -->
+    <header class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a href="#" class="navbar-brand logo">Nature<span class="fas fa-globe-asia"></span>Net</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="index.html#demo" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="index.html#pro" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="index.html#about" class="nav-link">About_Us</a></li>
+                <li class="nav-item"><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Get_Involved</a></li>
+                <li class="nav-item"><a href="#events" class="nav-link">Events</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- Header Section Ends -->
+
+    <!-- Volunteer Section Starts -->
+    <section>
+        <h1 class="hea">☘️🐐☘️🐘 Get Involved With Us ☘️🐐☘️🐘</h1><br><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mt-1.5">
+                    <p>At NatureNet, we believe that meaningful change starts with passionate individuals who are ready to make a difference. Whether you’re looking to get involved on the ground as a volunteer or support our initiatives through donations, your contribution is vital to our success in protecting the environment.</p>
+                    <h2 class="mb-3">Become a Member</h2>
+                    <p>Together, we can create a brighter, greener future. Whether you choose to volunteer, become a member, or donate, your involvement is crucial to the success of our mission.Thank you for your commitment to the environment. We look forward to working alongside you to protect our planet.</p>
+                </div>
+                <div class="col-md-7 mt-2">
+                    <h2 class="mb-3">Programs -></h2>
+                    <p><b>Participate in Conservation Projects:</b> Help restore habitats, protect endangered species, and plant native trees in areas that need reforestation.</p>
+                    <p><b>Engage in Community Outreach:</b> Educate local communities about the importance of environmental protection and sustainable living.</p>
+                    <p><b>Support Events and Campaigns:</b> Assist in organizing and executing events that raise awareness and funds for our conservation efforts.</p>
+                </div>
+                <div class="col-md-5">
+                    <img src="inv.jpg" alt="About Us" class="img-fluid rounded" height="400" width="450">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Volunteer Section Ends -->
+
+    <!-- Form Section Starts -->
+    <div class="row" id="form_data" style="margin-top: -50px;">
+        <h1 class="hea mb-5" id="data">🌼🐝🌼🐝 Join Us 🌼🐝🌼🐝</h1><br><br>
+        <div class="image col-5">
+            <img src="contact.gif" alt="contact" height="450" width="450" style="margin-left: 60px;">
+        </div>
+        <form action="submit.php" method="post" class="col-7" autocomplete="off">
+            <h3 style="font-size: 40px; padding-top: 20px;">Register as Member</h3>
+            <div class="inputBox" style="padding-top: 20px;">
+                <input type="text" name="fullname" placeholder="Enter Full Name" style="margin-left:-30px" required>
+                <input type="number" name="age" placeholder="Enter Age" style="margin-left:90px" required>
+            </div>
+            <div class="inputBox" style="padding-top: 25px;">
+                <input type="email" name="email" placeholder="Enter email" style="margin-left:-30px" required>
+                <input type="text" name="occupation" placeholder="Enter Occupation" style="margin-left:90px" required>
+            </div>
+            <div style="padding-top: 25px;">
+                <textarea name="descript" placeholder="Your Motive in 100 words" cols="30" rows="5" required></textarea>
+            </div>
+            <div style="padding-top: 15px;">
+                <input type="submit" value="Submit" class="btn btn-outline-success btn-xs">
+            </div>
+        </form>
+    </div>  
+    <!-- Form Section Ends -->  
+
+    <!-- Bootstrap Event Section Starts -->
+<section class="events py-5" id="events" style="background-color: #F6FCFF;">
+
+    <div class="container">
+        <h1 class="hea text-center mb-5">🐕🦀🐇🪸 Our Events 🐕🦀🐇🪸</h1>
+        <div class="row justify-content-center">
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-md h-100">
+                    <img src="event1.jpg" class="card-img-top" alt="Event 1">
+                    <div class="card-body">
+                        <h5 class="card-title text-success">21 October, 2024 / 11:00am to 01:00pm</h5>
+                        <a href="#" class="h4 text-dark d-block mt-2">Reuse, Reduce and Recycle</a>
+                        <p class="text-muted mt-3">Join our Reuse, Reduce, and Recycle event to minimize waste, promote sustainability, and encourage eco-friendly practices in your community.</p>
+                        <a href="#form_data" class="btn btn-outline-success btn-lg" style="margin-top: 33px;">Participate</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-md h-100">
+                    <img src="event2.jpg" class="card-img-top" alt="Event 2">
+                    <div class="card-body">
+                        <h5 class="card-title text-success">2 October, 2024 / 10:00am to 02:00pm</h5>
+                        <a href="#" class="h4 text-dark d-block mt-2">Beach Cleaning and Marine Protection</a>
+                        <p class="text-muted mt-3">Join our beach cleaning event to remove plastic waste, protect marine life, and support the conservation of ocean ecosystems.</p>
+                        <a href="#form_data" class="btn btn-outline-success btn-lg">Participate</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-md h-100">
+                    <img src="event3.jpg" class="card-img-top" alt="Event 3">
+                    <div class="card-body">
+                        <h5 class="card-title text-success">18 September, 2024 / 09:00am to 1:00pm</h5>
+                        <a href="#" class="h4 text-dark d-block mt-2">Saving the Environment and Planting Trees</a>
+                        <p class="text-muted mt-3">Join us for a tree-planting event to restore habitats, combat climate change, and promote environmental sustainability in your community.</p>
+                        <a href="#form_data" class="btn btn-outline-success btn-lg">Participate</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-md h-100">
+                    <img src="event4.jpg" class="card-img-top" alt="Event 4">
+                    <div class="card-body">
+                        <h5 class="card-title text-success">16 August, 2024 / 01:00pm to 04:00pm</h5>
+                        <a href="#" class="h4 text-dark d-block mt-2">Animal Rescue and Protection</a>
+                        <p class="text-muted mt-3">Participate in our animal rescue event to protect endangered species, rehabilitate wildlife, and help preserve biodiversity for future generations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-md h-100">
+                    <img src="event5.jpg" class="card-img-top" alt="Event 5">
+                    <div class="card-body">
+                        <h5 class="card-title text-success">25 June, 2024 / 12:00pm to 03:00pm</h5>
+                        <a href="#" class="h4 text-dark d-block mt-2">Street Cleaning And Act</a>
+                        <p class="text-muted mt-3">Join our street cleaning event to remove litter, promote cleanliness, and raise awareness for a healthier, eco-friendly urban environment.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-md h-100">
+                    <img src="event6.jpg" class="card-img-top" alt="Event 6">
+                    <div class="card-body">
+                        <h5 class="card-title text-success">1 May, 2024 / 09:00am to 12:00pm</h5>
+                        <a href="#" class="h4 text-dark d-block mt-2">Clean Forest and Save Wildlife</a>
+                        <p class="text-muted mt-3">Help clean the forest and protect wildlife by removing waste, restoring habitats, and preserving nature's balance for future generations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- Bootstrap Event Section Ends -->
+
+<!-- Bootstrap Footer Section Starts -->
+<div class="footer py-5">
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h3 class="text-success">Reach Us</h3>
+                <p>Reach us at NatureNet for inquiries, collaboration opportunities, or to join our environmental initiatives and make a meaningful impact together.</p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div style="margin-left: 30px;">
+                    <h3 class="text-success">Quick Links</h3>
+                    <a href="index.html#demo" class="d-block text-muted mb-2">Home</a>
+                    <a href="index.html#pro" class="d-block text-muted mb-2" style="margin-top: -17px;">Projects</a>
+                    <a href="index.html#about" class="d-block text-muted mb-2" style="margin-top: -17px;">About_Us</a>
+                    <a href="index.html#gallery" class="d-block text-muted mb-2" style="margin-top: -17px;">Gallery</a>
+                    <a href="#" class="d-block text-muted mb-2" style="margin-top: -17px;">Get_Involved</a>
+                    <a href="#events" class="d-block text-muted mb-2" style="margin-top: -17px;">Events</a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div style="margin-left: 20px;">
+                    <h3 class="text-success">Contact Us</h3>
+                    <p class="text-muted"><i class="fas fa-phone text-success"></i> +91 1100229898</p>
+                    <p class="text-muted" style="margin-top: -20px;"><i class="fas fa-envelope text-success"></i> naturenet@gmail.com</p>
+                    <p class="text-muted" style="margin-top: -20px;"><i class="fas fa-map-marker-alt text-success"></i> Mumbai, India - 400071</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div style="margin-left: 30px;">
+                    <h3 class="text-success">Follow Us</h3>
+                    <a href="#" class="d-block text-muted mb-2" style="text-decoration: none;">Facebook <i class="fab fa-facebook-f fa-2x" style="color: #3b5998;font-size: 30px; margin-left: 5px;"></i></a>
+                    <a href="#" class="d-block text-muted mb-2" style="text-decoration: none;">Twitter <i class="fab fa-twitter fa-2x" style="color: #55acee;font-size: 30px;margin-left: 5px;"></i></a>
+                    <a href="#" class="d-block text-muted mb-2" style="text-decoration: none;">Instagram <i class="fab fa-instagram fa-2x" style="color: #ac2bac;font-size: 30px;margin-left: 5px;"></i></a>
+                    <a href="#" class="d-block text-muted mb-2" style="text-decoration: none;">YouTube <i class="fab fa-youtube fa-2x" style="color: #ed302f;font-size: 30px;margin-left: 5px;"></i></a>
+                    <a href="#" class="d-block text-muted mb-2" style="text-decoration: none;">LinkedIn <i class="fab fa-linkedin-in fa-2x" style="color: #0082ca;font-size: 30px;margin-left: 5px;"></i></a>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="text-center mt-2" style="margin-bottom: -50px;">
+            <p class="credit text-muted">Created by <a href="#" class="text-success" style="text-decoration: none; font-family: cursive;">NatureNet</a> | All rights reserved © 2024</p>
+        </div>
+
+    </div>
+</div>
+<!-- Bootstrap Footer Section Ends -->
+</body>
+</html>

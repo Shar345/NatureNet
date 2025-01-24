@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Use Bootstrap CDN instead of local file paths -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>www.naturenet.com</title>
+    <style>
+html{
+    scroll-behavior: smooth;
+    scroll-padding: 6rem;
+}
+        /* header style */
+        /* Root Variables for Consistent Theming */
+:root {
+    --primary-color: #27ae60; /* Green color */
+    --nav-link-color: #666; /* Default text color for nav links */
+    --nav-link-hover-color: var(--primary-color); /* Hover color for nav links */
+    --navbar-bg: #f8f9fa; /* Light background color for the navbar */
+}
+
+/* Header Styling */
+header.navbar {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Add shadow to the navbar */
+    padding: 0.8rem 2rem; /* Adjust padding for the navbar */
+}
+
+header .navbar-brand {
+    font-size: 30px; /* Logo font size */
+    font-family: cursive; /*add cursive handwriting*/
+}
+
+header .navbar-brand span {
+    color: var(--primary-color); /* Color for the globe icon */
+}
+
+header .navbar-toggler {
+    border: none; /* Remove default border of the toggler */
+}
+
+header .navbar-toggler-icon {
+    background-color: var(--nav-link-color); /* Toggler icon color */
+}
+
+header .navbar-nav{
+    margin-left: 600px;
+}
+
+/* Nav Links Styling */
+header .navbar-nav .nav-link {
+    font-size: 20px; /* Increase the font size of the nav links */
+    margin-left: 0.5rem; /* Add space between nav items */
+    color: var(--nav-link-color); /* Default nav link color */
+    transition: color 0.3s ease-in-out; /* Smooth color transition */
+    font-family: cursive; /*add cursive handwriting*/
+}
+
+header .navbar-nav .nav-link:hover {
+    color: var(--nav-link-hover-color); /* Hover color for nav links */
+}
+
+/* Active Link Styling */
+header .navbar-nav .nav-item.active .nav-link {
+    color: var(--primary-color); /* Active link color */
+    font-weight: bold; /* Bold active link */
+}
+
+/* Responsive Styling */
+@media (max-width: 991px) {
+    header .navbar-nav .nav-link {
+        margin-left: 0; /* Remove spacing between items on smaller screens */
+        text-align: center; /* Center-align the links */
+        padding: 0.5rem 0; /* Add padding to nav links */
+    }
+}
+/* header style ends */
+
+/* carousel style starts */
+.carousel-caption{
+    font-family: cursive; /*add cursive handwriting*/
+    padding-bottom: 120px;
+}
+
+.carousel-caption h1{
+    color:#fff;
+    font-size: 80px;
+}
+
+.carousel-caption p{
+    font-size: 30px;
+    padding:1rem 0;
+    color: rgb(195, 195, 195);
+}
+
+.carousel-caption a:hover{
+    border-radius: 25px;
+    background-color:#27ae60;
+}
+/* carousel style ends */
+
+/* Icons style starts */
+/* Root Variables */
+:root {
+    --primary-color: #27ae60; /* Green color */
+    --card-border-radius: 10px; /* Rounded corners for cards */
+    --text-color: #666; /* Default text color */
+}
+
+/* Card Container Styling */
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border */
+    border-radius: var(--card-border-radius); /* Rounded corners */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    transition: transform 0.3s ease-in-out; /* Smooth transform for hover effect */
+    background-color: #fff; /* White background */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+}
+
+.card-img-top {
+    width: 20%; /* Adjust image size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.card-title {
+    font-size: 1.5rem; /* Slightly larger font size */
+    color: var(--primary-color); /* Primary green color for title */
+    font-family: cursive; /*add cursive handwriting*/
+}
+
+.card-text {
+    color: var(--text-color); /* Default text color */
+    font-size: 1rem; /* Consistent font size */
+    margin-bottom: 1rem; /* Spacing below text */
+    font-family: cursive; /*add cursive handwriting*/
+}
+
+.btn-outline-success {
+    border: 2px solid var(--primary-color); /* Thicker border for buttons */
+    color: var(--primary-color); /* Primary green color for text */
+    padding: 0.5rem 1.5rem; /* Padding for buttons */
+    text-transform: uppercase; /* Uppercase button text */
+    transition: background-color 0.4s ease-in-out, color 0.3s ease-in-out; /* Smooth transition for hover */
+}
+
+.btn-outline-success:hover {
+    background-color: var(--primary-color); /* Background on hover */
+    color: white; /* White text on hover */
+    border-radius: 30px; /* Rounded button corners */
+}
+/* Icons style ends */
+
+/* Project style Start */
+.heading{
+    font-size: 35px;
+    color:#666;
+    text-align: center;
+    text-transform: uppercase;
+    padding:1rem;
+    font-family: cursive; /*add cursive handwriting*/
+}
+
+.project .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: cursive; /*add cursive handwriting*/
+}
+
+.project .box-container .box{
+    overflow: hidden;
+    border-radius: .5rem;
+    width:20rem;
+    height:30rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.3);
+    position: relative;
+    margin:1rem;
+}
+
+.project .box-container .box img{
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+}
+
+.project .box-container .box .title{
+    position: absolute;
+    bottom:0; left:0;
+    width:100%;
+    font-size: 3.5rem;
+    color:#fff;
+    padding:2rem;
+}
+
+.project .box-container .box .info{
+    background:white;
+    border-radius: .5rem;
+    padding:1.5rem;
+    position: absolute;
+    bottom:-150%; left:50%;
+    transform:translateX(-50%);
+    width:80%;
+    transition: all .2s;
+}
+
+.project .box-container .box:hover .info{
+    bottom:10px;
+    transition-delay: .3s;
+}
+
+.project .box-container .box .info h3{
+    color:#27ae60;
+    font-size: 25px;
+}
+
+.project .box-container .box .info p{
+    color:#999;
+    font-size: 15px;
+    padding:1rem 0;
+}
+
+.project .box-container .box .info a{
+    color:#666;
+    font-size: 1.4rem;
+    text-decoration: none;
+    margin-left: 35px;
+}
+
+.project .box-container .box .info a:hover{
+    background-color:#27ae60;
+    color: white;
+    border-radius: 30px;
+
+}
+/* Project style ends */
+
+/* AboutUs style starts */
+.row{
+    font-size: 18px;
+    font-family: cursive;
+}
+
+.head{
+    font-family: cursive;
+    text-align: center;
+    font-size: 37px;
+}
+
+.team-wrapper{
+
+    padding: 50px 0px;
+    min-height: 100vh;
+}
+.section-title{
+    padding: 30px 0px;
+}
+.section-title h2{
+    font-size: 44px;
+    font-weight: 700;
+}
+.team-item{
+    position: relative;
+    background: #424248;
+    margin: 15px 5px;
+    overflow: hidden;
+    transition: all .5s;
+    border-radius: 20px;
+}
+.item-meta{
+    position: absolute;
+    background: #e8e6e6;
+    width: 100%;
+    bottom: -74px;
+    left: 0;
+    padding: 10px 20px;
+    transition: all .5s;
+}
+.team-item:hover .item-meta{
+    bottom: 0px;
+}
+.item-meta h3{
+    color: #262626;
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+}
+.item-meta h6{
+    color: #ff8100;
+    font-size: 17px;
+    text-align: center;
+}
+.item-image img{
+    transition: all .5s;
+}
+
+.ico{
+    font-size: 12px;
+    padding-top: 12px;
+}
+/* About style ends */
+
+/* Gallery style Starts */
+.col-md-6{
+    margin-top: 22px;
+}
+/* Gallery style ends */
+
+/* Footer Section starts */
+/* Footer Custom Styles */
+.footer {
+    background: url(footer-bg.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.footer h3 {
+    font-size: 2rem;
+    color: var(--green);
+    padding: .5rem 0;
+}
+
+.footer p, .footer a {
+    font-size: 1.3rem;
+    color: #666;
+    padding: .5rem 0;
+}
+
+.footer a:hover {
+    text-decoration: none;
+}
+
+.footer .credit {
+    padding: 1rem .5rem;
+    font-size: 1.7rem;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+}
+
+.footer .credit a {
+    color: var(--green);
+}
+/* Event style ends */
+
+    </style>
+</head>
+<body>
+    <!-- Header Section Starts -->
+    <header class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a href="#" class="navbar-brand logo">Nature<span class="fas fa-globe-asia"></span>Net</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="#demo" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#pro" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About_Us</a></li>
+                <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="form.html#form_data" class="nav-link">Get_Involved</a></li>
+                <li class="nav-item"><a href="form.html#events" class="nav-link">Events</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- Header Section Ends -->
+
+    <!-- Carousel section starts -->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel" data-bs-wrap="true">
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+        
+          <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+                <img src="home_page.jpg" alt="Los Angeles" class="d-block w-100">
+                <div class="carousel-caption">
+                    <h1>Save the Planet</h1>
+                    <p>Saving the planet requires collective action reducing waste, conserving resources, protecting biodiversity, and embracing sustainable practices to ensure a healthy Earth for future generations.</p>
+                    <a href="form.html#form_data" class="btn btn-outline-success btn-lg">Get Started</a>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="ani2.jpg" alt="Chicago" class="d-block w-100">
+                <div class="carousel-caption">
+                    <h1>Join the Clan</h1>
+                    <p>Join the Community to make a positive impact restore ecosystems, reduce pollution, raise awareness, and contribute to preserving our planet for future generations.</p>
+                    <a href="form.html#form_data" class="btn btn-outline-success btn-lg">Get Started</a>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="ani3.jpg" alt="New York" class="d-block w-100">
+                <div class="carousel-caption">
+                    <h1>Grow With Us</h1>
+                    <p>Grow with us as we cultivate a greener future embrace sustainable practices, nurture the environment, and work together to create lasting change for our planet.</p>
+                    <a href="form.html#form_data" class="btn btn-outline-success btn-lg">Get Started</a>
+                </div>
+            </div>
+    </div>
+    
+      <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+    <!-- Carousel section ends -->
+
+    <!-- Icons Section Starts -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <img src="icon1.png" class="card-img-top mx-auto mt-4" alt="Recycle">
+                     <div class="card-body">
+                        <h3 class="card-title">Recycle</h3>
+                        <p class="card-text">Recycle to reduce waste, conserve resources, and protect the environment turn discarded materials into valuable, reusable resources for a sustainable future.</p>
+                        <a href="#" class="btn btn-outline-success">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <img src="icon2.png" class="card-img-top mx-auto mt-4" alt="Solar Panel">
+                    <div class="card-body">
+                        <h3 class="card-title">Solar Panel</h3>
+                        <p class="card-text">Solar panels harness the sun’s energy to generate clean electricity, reducing reliance on fossil fuels and cutting greenhouse gas emissions.</p>
+                        <a href="#" class="btn btn-outline-success">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <img src="icon3.png" class="card-img-top mx-auto mt-4" alt="Save Water">
+                    <div class="card-body">
+                        <h3 class="card-title">Save Water</h3>
+                        <p class="card-text">Save water by reducing usage, fixing leaks, and adopting efficient practices to preserve this vital resource for future generations and ecosystems.</p>
+                        <a href="#" class="btn btn-outline-success">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <img src="icon4.png" class="card-img-top mx-auto mt-4" alt="Windmill">
+                    <div class="card-body">
+                        <h3 class="card-title">Windmill</h3>
+                        <p class="card-text">Windmills convert wind energy into electricity, providing a clean, renewable power source that reduces dependence on fossil fuels and cuts emissions.</p>
+                        <a href="#" class="btn btn-outline-success">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Icons Section Ends -->
+
+    <!-- Project Section Starts -->
+    <section class="project" id="pro">
+        <h1 class="heading">🌱🐾🌱🐕 Our Projects 🌱🐾🌱🐕</h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="project-1.jpg" alt="">
+                <h3 class="title">Planting Tress</h3>
+                <div class="info">
+                    <h3>Planting Tress</h3>
+                    <p>NatureNet organizes tree planting events to enhance ecosystems, combat climate change, and promote a healthier, greener planet.</p>
+                    <a href="#" class="btn btn-outline-dark">read more</a>
+                </div>
+            </div>
+    
+            <div class="box">
+                <img src="project-2.jpg" alt="">
+                <h3 class="title">Wind Energy</h3>
+                <div class="info">
+                    <h3>Wind Energy</h3>
+                    <p>NatureNet harnesses wind energy to provide sustainable power, reduce carbon footprints, and promote clean energy solutions.</p>
+                    <a href="#" class="btn btn-outline-dark">read more</a>
+                </div>
+            </div>
+    
+            <div class="box">
+                <img src="project-3.jpg" alt="">
+                <h3 class="title">Saving Animals</h3>
+                <div class="info">
+                    <h3>Saving Animals</h3>
+                    <p>NatureNet works to protect wildlife, rescue endangered species, and conserve habitats to ensure a thriving animal population.</p>
+                    <a href="#" class="btn btn-outline-dark">read more</a>
+                </div>
+            </div>
+    
+            <div class="box">
+                <img src="project-4.jpg" alt="">
+                <h3 class="title">Recyling Waste</h3>
+                <div class="info">
+                    <h3>Recyling Waste</h3>
+                    <p>NatureNet promotes recycling waste to minimize landfill use, conserve resources, and support a circular economy.</p>
+                    <a href="#" class="btn btn-outline-dark">read more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Project Section Ends --><br><br>
+
+    <!-- About Section Starts -->
+    <section id="about">
+        <h1 class="heading">🪴🐻‍❄️🪴🐼 About Us 🪴🐻‍❄️🪴🐼</h1><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="ani4.jpg" alt="About Us" class="img-fluid rounded" height="550" width="550">
+                </div>
+                <div class="col-md-7 mt-2">
+                    <p>Welcome to NatureNet, where passion meets purpose in protecting the Earth's precious ecosystems. We are a dedicated team of environmentalists, conservationists, and nature lovers united by a common goal: to safeguard the planet’s natural heritage for future generations.</p>
+                    <h2 class="mb-3">Our Mission</h2>
+                    <p>At NatureNet, our mission is to foster a deep connection between people and the natural world. We believe that every species, from the smallest insect to the largest mammal, plays a vital role in maintaining the delicate balance of our ecosystems. Our work focuses on the conservation of animals, plants, and the diverse habitats they call home.</p>
+                </div>
+                <div class="col-md-12 mt-1.5">
+                    <h2 class="mb-3">What We Do</h2>
+                    <p><b>Animal Conservation:</b> We are committed to protecting endangered species and preserving wildlife habitats. Through research, advocacy, and on-the-ground conservation efforts, we work to ensure that animals have safe and sustainable environments to thrive.</p>
+                    <p><b>Plant Preservation:</b> Plants are the foundation of all life on Earth. Our initiatives include restoring native plant species, combating deforestation, and promoting sustainable agriculture practices that protect biodiversity.</p>
+                    <p><b>Nature Conservation:</b> From lush forests to vibrant coral reefs, we strive to protect the natural landscapes that are crucial to our planet’s health. Our projects focus on ecosystem restoration, pollution reduction, and educating communities on the importance of environmental stewardship.</p>
+
+                    <h2 class="mb-3">Our Approach</h2>
+                    <p>We believe that real change happens when communities come together. That’s why we prioritize collaboration with local organizations, governments, and individuals to create lasting, positive impacts on the environment. By combining traditional knowledge with modern science, we develop innovative solutions that address the unique challenges faced by our planet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-wrapper"> 
+        <h1 class="head">🐾🐾 Our Influencers 🐾🐾</h1><br>
+        <div class="container">
+            <div class="row">
+                <!-- Our Team item start -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="team-item">
+                        <div class="item-image">
+                            <img src="infu1.jpg" alt="" width="100%" height="397px">
+                        </div>
+                        <div class="item-meta">
+                            <h3 class="item-title">Jadhav Peyang</h3>
+                            <h6 class="item-position">Forest Man of India</h6>
+                            <div class="ico"> 
+                                <!-- Instagram -->
+                                <i class="fab fa-instagram fa-2x" style="color: #ac2bac; margin-left: 30px; cursor: pointer;"></i>
+                                <!-- Twitter -->
+                                <i class="fab fa-twitter fa-2x" style="color: #55acee; margin-left: 30px; cursor: pointer;"></i>
+                                <!-- Google -->
+                                <a href="https://en.wikipedia.org/wiki/Jadav_Payeng#:~:text=Jadav%20%22%20Molai%20%22#:~:text=Jadav%20%22%20Molai%20%22"><i class="fab fa-google fa-2x" style="color: #dd4b39; margin-left: 30px; cursor: pointer;"></i></a>
+                                <!-- Linkedin -->
+                                <i class="fab fa-linkedin-in fa-2x" style="color: #0082ca; margin-left: 30px; cursor: pointer;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Our Team item end -->
+                <!-- Our Team item start -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="team-item">
+                        <div class="item-image">
+                            <img src="infu2.jpg" alt="" width="100%">
+                        </div>
+                        <div class="item-meta">
+                            <h3 class="item-title">Jane Goodall</h3>
+                            <h6 class="item-position">Zoologist and Arthropologist</h6>
+                            <div class="ico"> 
+                                <!-- Instagram -->
+                                <i class="fab fa-instagram fa-2x" style="color: #ac2bac; margin-left: 30px; cursor: pointer;"></i>
+                                <!-- Twitter -->
+                                <i class="fab fa-twitter fa-2x" style="color: #55acee; margin-left: 30px; cursor: pointer;"></i>
+                                <!-- Google -->
+                                <a href="https://en.wikipedia.org/wiki/Jane_Goodall#:~:text=Dame%20Jane%20Morris#:~:text=Dame%20Jane%20Morris"><i class="fab fa-google fa-2x" style="color: #dd4b39; margin-left: 30px; cursor: pointer;"></i></a>
+                                <!-- Linkedin -->
+                                <i class="fab fa-linkedin-in fa-2x" style="color: #0082ca; margin-left: 30px; cursor: pointer;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Our Team item end -->
+                <!-- Our Team item start -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="team-item">
+                        <div class="item-image">
+                            <img src="infu4.jpg" alt="" width="100%" height="397px">
+                        </div>
+                        <div class="item-meta">
+                            <h3 class="item-title">Hugo Tagholm</h3>
+                            <h6 class="item-position">Surfer and Environmentalist</h6>
+                            <div class="ico"> 
+                                <!-- Instagram -->
+                                <i class="fab fa-instagram fa-2x" style="color: #ac2bac; margin-left: 30px; cursor: pointer;"></i>
+                                <!-- Twitter -->
+                                <i class="fab fa-twitter fa-2x" style="color: #55acee; margin-left: 30px; cursor: pointer;"></i>
+                                <!-- Google -->
+                                <a href="https://oceanleaders.org/the_2020_cohort/hugo-tagholm/#:~:text=Hugo%20is%20Executive"><i class="fab fa-google fa-2x" style="color: #dd4b39; margin-left: 30px; cursor: pointer;"></i></a>
+                                <!-- Linkedin -->
+                                <i class="fab fa-linkedin-in fa-2x" style="color: #0082ca; margin-left: 30px; cursor: pointer;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Our Team item end -->
+                <!-- Our Team item start -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="team-item">
+                        <div class="item-image">
+                            <img src="infu3.jpg" alt="" width="100%" height="397px">
+                        </div>
+                        <div class="item-meta">
+                            <h3 class="item-title">Kaveri Rana Bhardwaj</h3>
+                            <h6 class="item-position">Social Worker</h6>
+                            <div class="ico"> 
+                                <!-- Instagram -->
+                                <i class="fab fa-instagram fa-2x" style="color: #ac2bac; margin-left: 30px; cursor: pointer;"></i>
+                                <!-- Twitter -->
+                                <i class="fab fa-twitter fa-2x" style="color: #55acee; margin-left: 30px; cursor: pointer;"></i>
+                                <!-- Google -->
+                                <a href="https://yourstory.com/socialstory/2020/12/monday-motivation-kaveri-rana-dog-mother-noida"><i class="fab fa-google fa-2x" style="color: #dd4b39; margin-left: 30px; cursor: pointer;"></i></a>
+                                <!-- Linkedin -->
+                                <i class="fab fa-linkedin-in fa-2x" style="color: #0082ca; margin-left: 30px; cursor: pointer;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Our Team item end -->
+            </div>
+        </div><br><br><br>
+
+
+        <h1 class="head">🐾🐾 Our Team 🐾🐾</h1><br>
+        <div class="container">
+            <div class="row">
+                <!-- Our Team item start -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="team-item">
+                        <div class="item-image">
+                            <img src="team1.jpg" alt="" width="100%" height="396px">
+                        </div>
+                        <div class="item-meta">
+                            <h3 class="item-title">Sneha Shahi</h3>
+                            <h6 class="item-position">Conservationist</h6>
+                            <div class="ico"> 
+                                <!-- Instagram -->
+                                <i class="fab fa-instagram fa-2x" style="color: #ac2bac; margin-left: 30px; cursor: pointer;"></i>
+                                <!-- Twitter -->
+                                <i class="fab fa-twitter fa-2x" style="color: #55acee; margin-left: 30px; cursor: pointer;"></i>
+                                <!-- Google -->
+                                <a href="https://www.vogue.in/culture-and-living/content/13-indian-youth-changemakers-to-know-in-2021"><i class="fab fa-google fa-2x" style="color: #dd4b39; margin-left: 30px; cursor: pointer;"></i></a>
+                                <!-- Linkedin -->
+                                <i class="fab fa-linkedin-in fa-2x" style="color: #0082ca; margin-left: 30px; cursor: pointer;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Our Team item end -->
+                <!-- Our Team item start -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="team-item">
+                        <div class="item-image">
+                            <img src="team2.jpg" alt="" width="100%" height="396">
+                        </div>
+                        <div class="item-meta">
+                            <h3 class="item-title">Berjis Driver</h3>
+                            <h6 class="item-position">Urban Consultant</h6>
+                            <div class="ico"> 
+                                <!-- Instagram -->
+                                <i class="fab fa-instagram fa-2x" style="color: #ac2bac; margin-left: 30px; cursor: pointer;"></i>
+                                <!-- Twitter -->
+                                <i class="fab fa-twitter fa-2x" style="color: #55acee; margin-left: 30px; cursor: pointer;"></i>
+                                <!-- Google -->
+                                <a href="https://www.vogue.in/culture-and-living/content/13-indian-youth-changemakers-to-know-in-2021"><i class="fab fa-google fa-2x" style="color: #dd4b39; margin-left: 30px; cursor: pointer;"></i></a>
+                                <!-- Linkedin -->
+                                <i class="fab fa-linkedin-in fa-2x" style="color: #0082ca; margin-left: 30px; cursor: pointer;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Our Team item end -->
+                <!-- Our Team item start -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="team-item">
+                        <div class="item-image">
+                            <img src="team3.jpg" alt="" width="100%" height="395px">
+                        </div>
+                        <div class="item-meta">
+                            <h3 class="item-title">Neha Naikwade</h3>
+                            <h6 class="item-position">Environment Data Scientist</h6>
+                            <div class="ico"> 
+                                <!-- Instagram -->
+                                <i class="fab fa-instagram fa-2x" style="color: #ac2bac; margin-left: 30px; cursor: pointer;"></i>
+                                <!-- Twitter -->
+                                <i class="fab fa-twitter fa-2x" style="color: #55acee; margin-left: 30px; cursor: pointer;"></i>
+                                <!-- Google -->
+                                <a href="https://www.vogue.in/culture-and-living/content/13-indian-youth-changemakers-to-know-in-2021"><i class="fab fa-google fa-2x" style="color: #dd4b39; margin-left: 30px; cursor: pointer;"></i></a>
+                                <!-- Linkedin -->
+                                <i class="fab fa-linkedin-in fa-2x" style="color: #0082ca; margin-left: 30px; cursor: pointer;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Our Team item end -->
+                <!-- Our Team item start -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="team-item">
+                        <div class="item-image">
+                            <img src="team4.jpg" alt="" width="100%" height="395px">
+                        </div>
+                        <div class="item-meta">
+                            <h3 class="item-title">Ranjan Biswal</h3>
+                            <h6 class="item-position">Wildlife Conservation Activist</h6>
+                            <div class="ico"> 
+                                <!-- Instagram -->
+                                <i class="fab fa-instagram fa-2x" style="color: #ac2bac; margin-left: 30px; cursor: pointer;"></i>
+                                <!-- Twitter -->
+                                <i class="fab fa-twitter fa-2x" style="color: #55acee; margin-left: 30px; cursor: pointer;"></i>
+                                <!-- Google -->
+                                <a href="https://www.vogue.in/culture-and-living/content/13-indian-youth-changemakers-to-know-in-2021"><i class="fab fa-google fa-2x" style="color: #dd4b39; margin-left: 30px; cursor: pointer;"></i></a>
+                                <!-- Linkedin -->
+                                <i class="fab fa-linkedin-in fa-2x" style="color: #0082ca; margin-left: 30px; cursor: pointer;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Our Team item end -->
+            </div>
+        </div>
+    </section>
+    <!-- About Section Ends -->
+
+    <!-- Gallery Section Starts -->
+    <section id="gallery" class="section-top-border">
+        <h1 class="heading">🌿🐹🌿🐰 Gallery 🌿🐹🌿🐰</h1><br>
+        <div class="container">
+            <div class="row gallery-item">
+                <div class="col-md-4">
+                    <a href="gal1.jpg" class="img-pop-up">
+                        <img src="gal1.jpg" alt="" width="100%" height="250px">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="gal2.jpg" class="img-pop-up">
+                        <img src="gal2.jpg" alt="" width="100%" height="250px">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="gal3.jpg" class="img-pop-up">
+                        <img src="gal3.jpg" alt="" width="100%" height="250px">
+                    </a>
+                </div><br><br>
+                <div class="col-md-6">
+                    <a href="gal4.jpg" class="img-pop-up">
+                        <img src="gal4.jpg" alt="" width="100%" height="250px">
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a href="gal5.jpg" class="img-pop-up">
+                        <img src="gal5.jpg" alt="" width="100%" height="250px">
+                    </a>
+                </div>
+                <div class="col-md-4" style="margin-top: 22px;">
+                    <a href="gal6.jpg" class="img-pop-up">
+                        <img src="gal6.jpg" alt="" width="100%" height="250px">
+                    </a>
+                </div>
+                <div class="col-md-4" style="margin-top: 22px;">
+                    <a href="gal7.jpg" class="img-pop-up">
+                        <img src="gal7.jpg" alt="" width="100%" height="250px">
+                    </a>
+                </div>
+                <div class="col-md-4" style="margin-top: 22px;">
+                    <a href="gal8.jpg" class="img-pop-up">
+                        <img src="gal8.jpg" alt="" width="100%" height="250px">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section><br><br><br>
+
+    <!-- Bootstrap Footer Section Starts -->
+<div class="footer py-5">
+
+    <div class="container" style="margin-top: -50px;">
+        <div class="row">
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h3 class="text-success">Reach Us</h3>
+                <p>Reach us at NatureNet for inquiries, collaboration opportunities, or to join our environmental initiatives and make a meaningful impact together.</p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div style="margin-left: 30px;">
+                    <h3 class="text-success">Quick Links</h3>
+                    <a href="index.html#demo" class="d-block text-muted mb-2">Home</a>
+                    <a href="index.html#pro" class="d-block text-muted mb-2" style="margin-top: -17px;">Projects</a>
+                    <a href="index.html#about" class="d-block text-muted mb-2" style="margin-top: -17px;">About_Us</a>
+                    <a href="index.html#gallery" class="d-block text-muted mb-2" style="margin-top: -17px;">Gallery</a>
+                    <a href="form.html" class="d-block text-muted mb-2" style="margin-top: -17px;">Get_Involved</a>
+                    <a href="form.html#events" class="d-block text-muted mb-2" style="margin-top: -17px;">Events</a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div style="margin-left: 20px;">
+                    <h3 class="text-success">Contact Us</h3>
+                    <p class="text-muted"><i class="fas fa-phone text-success"></i> +91 1100229898</p>
+                    <p class="text-muted" style="margin-top: -20px;"><i class="fas fa-envelope text-success"></i> naturenet@gmail.com</p>
+                    <p class="text-muted" style="margin-top: -20px;"><i class="fas fa-map-marker-alt text-success"></i> Mumbai, India - 400071</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div style="margin-left: 30px;">
+                    <h3 class="text-success">Follow Us</h3>
+                    <a href="#" class="d-block text-muted mb-2" style="text-decoration: none;">Facebook <i class="fab fa-facebook-f fa-2x" style="color: #3b5998;font-size: 30px; margin-left: 5px;"></i></a>
+                    <a href="#" class="d-block text-muted mb-2" style="text-decoration: none;">Twitter <i class="fab fa-twitter fa-2x" style="color: #55acee;font-size: 30px;margin-left: 5px;"></i></a>
+                    <a href="#" class="d-block text-muted mb-2" style="text-decoration: none;">Instagram <i class="fab fa-instagram fa-2x" style="color: #ac2bac;font-size: 30px;margin-left: 5px;"></i></a>
+                    <a href="#" class="d-block text-muted mb-2" style="text-decoration: none;">YouTube <i class="fab fa-youtube fa-2x" style="color: #ed302f;font-size: 30px;margin-left: 5px;"></i></a>
+                    <a href="#" class="d-block text-muted mb-2" style="text-decoration: none;">LinkedIn <i class="fab fa-linkedin-in fa-2x" style="color: #0082ca;font-size: 30px;margin-left: 5px;"></i></a>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="text-center mt-2" style="margin-bottom: -50px;">
+            <p class="credit text-muted">Created by <a href="#" class="text-success" style="text-decoration: none; font-family: cursive;">NatureNet</a> | All rights reserved © 2024</p>
+        </div>
+
+    </div>
+</div>
+<!-- Bootstrap Footer Section Ends -->
+
+</body>
+</html>
